@@ -121,7 +121,7 @@ class LLMClient:
         estimated_tokens = self.estimate_tokens(prompt)
 
         limits = {
-            "deepseek/deepseek-r1-distill-llama-8b": 8192,  # safe default
+            "deepseek/deepseek-v3.1": 8192,  # safe default
             "gpt-4": 8000,
             "gpt-3.5-turbo": 4000,
             "gpt-4-32k": 32000,
