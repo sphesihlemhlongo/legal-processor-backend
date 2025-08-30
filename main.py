@@ -37,8 +37,11 @@ llm_client = LLMClient()
 document_writer = DocumentWriter()
 
 # Ensure directories exist
-os.makedirs("uploads", exist_ok=True)
-os.makedirs("outputs", exist_ok=True)
+UPLOAD_DIR = "/tmp/uploads"
+OUTPUT_DIR = "/tmp/outputs"
+
+os.makedirs(UPLOAD_DIR, exist_ok=True)
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 @app.get("/")
 def read_root():
