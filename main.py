@@ -40,6 +40,10 @@ document_writer = DocumentWriter()
 os.makedirs("uploads", exist_ok=True)
 os.makedirs("outputs", exist_ok=True)
 
+@app.get("/")
+def read_root():
+    return {"Legal Document Processor": "Live"}
+
 @app.post("/upload")
 async def upload_documents(
     background_tasks: BackgroundTasks,
