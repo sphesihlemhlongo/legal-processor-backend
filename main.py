@@ -62,7 +62,7 @@ async def upload_documents(
         # Save uploaded files
         for i, file in enumerate(files):
             file_id = str(uuid.uuid4())
-            file_path = f"uploads/{file_id}_{file.filename}"
+            file_path = f"/tmp/uploads/{file_id}_{file.filename}"
             
             # Save file to disk
             with open(file_path, "wb") as buffer:
