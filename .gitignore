@@ -35,3 +35,4 @@ env.bak/
 env/
 logs/
 npm-debug.log*
+.vercel
